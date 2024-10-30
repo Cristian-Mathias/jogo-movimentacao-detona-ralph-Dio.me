@@ -1,0 +1,97 @@
+
+.menuInferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: 80px;
+    width: 100%;
+    background-color: #000000;
+    border-top: 5px solid #805101;
+}
+
+.menuInferiorButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.menuInferiorButton img {
+    width: 40px;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.menuInferiorButton:focus {
+    outline: none;
+}
+
+.menuInferiorButton:hover {
+    opacity: 0.8;
+}
+
+.menuInferiorPause {
+    background-color: #ffcc00; 
+    color: white; 
+}
+
+.menuInferiorPlay {
+    background-color: #ffcc00; 
+    color: white; 
+}
+
+.menuInferiorEngrenagem {
+    background-image: url('./public/images/reset.png');
+}
+
+.menuInferiorPlay img {
+    background-image: url('./public/images/play.png');
+}
+
+.menuInferiorPause img {
+    background-image: url('./public/images/pause.png');
+}
+
+.menuInferiorButton img {
+    filter: brightness(0.8); 
+}
+
+
+/* Desktop e Notebooks */
+@media (min-width: 1025px) {
+    .menuInferior {
+        gap: 100px;
+        height: 80px;
+    }
+
+    .menuInferiorButton img {
+        width: 40px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .menuInferior {
+        gap: 50px;
+        height: 70px;
+    }
+
+    .menuInferiorButton img {
+        width: 30px;
+    }
+}
+
+/* Dispositivos móveis */
+@media (max-width: 767px) {
+    .menuInferior {
+        gap: 20px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menuInferiorButton img {
+        width: 25px;
+    }
+}

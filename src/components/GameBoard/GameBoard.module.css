@@ -1,0 +1,90 @@
+
+.panel {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../public/images/wall.png");
+  background-position: center;
+  width: 100vw;
+  max-width: 100%; 
+  height: auto;
+  min-width: 320px;
+  cursor: url('/public/images/thor.png'), auto; 
+}
+/* Efeito de marretada */
+.panel:active {
+  animation: hammering 0.2s ease; 
+}
+
+@keyframes hammering {
+  0% {
+    transform: translateY(0); 
+  }
+  50% {
+    transform: translateY(5px); 
+  }
+  100% {
+    transform: translateY(0); 
+  }
+}
+
+.panelRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.square {
+  height: 120px;
+  width: 120px;
+  border: 2px solid #000000;
+  background-color: #ffc800c3;
+  position: relative;
+}
+
+.enemy {
+  background-image: url("/public/images/ralph.png");
+  background-size: cover;
+  background-position: center;
+  width: 120px;
+  height: 120px;
+}
+
+/* Responsividade */
+
+/* Desktop e Notebooks */
+@media (min-width: 1025px) {
+  .panel {
+      padding: 1rem;
+  }
+
+  .square,
+  .enemy {
+      width: 120px;
+      height: 120px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .square,
+  .enemy {
+      width: 100px;
+      height: 100px;
+  }
+}
+
+/* Dispositivos móveis */
+@media (max-width: 767px) {
+  .panel {
+      padding: 0 10px;
+  }
+
+  .square,
+  .enemy {
+      width: 80px;
+      height: 80px;
+  }
+}
